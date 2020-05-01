@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Групповая практика</title>
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="wrap">
+            <div id="customer_wrap" class="col">
+                <div id="add_customer_wrap">
+                    <form id="add_customer_form">
+                        <div class="form_row">
+                            <input type="text" name="name" id="customer_name" placeholder="Имя покупателя">
+                        </div>
+                        <div class="form_row">
+                            <input type="number" name="discount" id="customer_discount" placeholder="Процент скидки">
+                        </div>
+                        <div class="form_btn">
+                            <a href="javascript:void(0)" class="btn" onclick="addCustomer()">Добавить покупателя</a>
+                        </div>
+                    </form>
+                </div>
+                <h3>Покупатели</h3>
+                <ul id="customers_list">
+                    <!--тут должен быть обновляемый список покупателей, с действиями "скупиться", "на кассу" и "выполнено"-->
+                </ul>
+            </div>
+            <div id="products_wrap" class="col">
+                <div id="add_product_wrap">
+                    <form id="add_product_form">
+                        <div class="form_row">
+                            <input type="text" name="title" id="product_title" placeholder="Название товара">
+                        </div>
+                        <div class="form_row">
+                            <input type="text" name="price" id="product_price" placeholder="Цена товара">
+                        </div>
+                        <div class="form_row">
+                            <input type="text" name="discount_price" id="product_discount_price" placeholder="Цена товара со скидкой">
+                        </div>
+                        <div class="form_row">
+                            <input type="number" name="amount" id="product_amount" placeholder="Доступное количество">
+                        </div>
+                        <div class="form_btn">
+                            <a href="javascript:void(0)" class="btn" onclick="addProduct()">Добавить товар</a>
+                        </div>
+                    </form>
+                </div>
+                <h3>Товары на прилавках</h3>
+                <ul id="products_list">
+                    <!--тут должен быть обновляемый список товаров в магазине-->
+                </ul>
+            </div>
+            <div id="customer_cart_wrap" class="col">
+                <div id="add_customer_product_wrap">
+                    <form id="add_customer_product_form">
+                        <div class="form_row">
+                            <select name="customers" id="customers_select">
+                                <option value="">-=Выберите покупателя=-</option>
+                            </select>
+                        </div>
+                        <div class="form_row">
+                            <select name="products" id="products_select">
+                                <option value="">-=Выберите товар=-</option>
+                            </select>
+                        </div>
+                        <div class="form_row">
+                            <input type="number" name="quantity" id="product_quantity" placeholder="Количество товара">
+                        </div>
+                        <div class="form_btn">
+                            <a href="javascript:void(0)" class="btn" onclick="addToCart()">Добавить в корзину</a>
+                        </div>
+                    </form>
+                </div>
+                <h3>Товары в корзине</h3>
+                <ol id="customer_cart_list">
+                    <!--тут должен выводиться список продуктов в корзине пользователя c возможностью изменить количество и удалить товар из корзины-->
+                </ol>
+            </div>
+            <div id="cashbox_wrap" class="col">
+                <h3>Касса</h3>
+                <div id="customer_info">
+                    <!--тут должен выводиться информация о покупателе-->
+                </div>
+                <div id="cart_info">
+                    <!--тут должен выводиться список товаров в корзине с итоговой суммой-->
+                </div>
+                <div class="form_btn">
+                    <a href="javascript:void(0)" class="btn" onclick="doneCustomer()">Оплатить</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="assets/js/variables.js"></script>
+
+    <script src="assets/js/onload.js"></script>
+</body>
+
+</html>
