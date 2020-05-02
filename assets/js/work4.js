@@ -42,12 +42,13 @@ function addProduct() {
         document.getElementById("product_price").value = '';
         document.getElementById("product_discount_price").value = '';
         document.getElementById("product_amount").value = '';
-        //viewProductsList();
+        viewProductsList();
         getProductsOptions();
     } else {
         alert(msg);
     }
 }
+
 function viewProductsList() {
     //TODO: функция заполнения выпадающего списка товаров
     let result = '';
