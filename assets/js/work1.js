@@ -44,7 +44,11 @@ viewCustomersList();
 function viewCustomersList() {
     let list = '<ul>';
     for (let i = 0; i < CUSTOMERS.length; i++){
-        list += `<li><span>${CUSTOMERS[i].name}; ${CUSTOMERS[i].discount}%</span><button type="button" onclick="processCustomer()">Скупиться</button></li>`;
+        if (CUSTOMERS[i].status == 1) {
+        list += `<li><span>${CUSTOMERS[i].name}; ${CUSTOMERS[i].discount}%; ${CUSTOMERS[i].cart}</span><button type="button" onclick="processCustomer()">На кассу</button></li>`;
+        } else {
+            list += `<li><span>${CUSTOMERS[i].name}; ${CUSTOMERS[i].discount}%</span></li>`;
+        }
     }
     list +='</ul>';
     document.getElementById('customers_list').innerHTML = list;
