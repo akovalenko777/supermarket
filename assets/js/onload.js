@@ -1,5 +1,6 @@
 function addCustomer() {
     //TODO: добавления покупателя
+
 }
 
 function viewCustomersList() {
