@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-//TODO: написать функцию, которая будет выводить список покупателей
-function viewCustomersList() {
-    let list = '<ul>';
-    for (let i = 0; i < CUSTOMERS.length; i++) {
-        list += `<li><span>${CUSTOMERS[i].name}; ${CUSTOMERS[i].discount}%</span></li>`;
-    }
-    list += '</ul>';
-    document.getElementById('customers_list').innerHTML = list;
-}
-=======
->>>>>>> master
 function addCustomer() {
     let nameInput = document.querySelector("#customer_name").value,
         prosentInput = document.querySelector('#customer_discount').value;
@@ -27,25 +15,13 @@ function addCustomer() {
     getCustomersOptions();
     viewCustomersList();
 }
-<<<<<<< HEAD
-function getCustomersOptions() {
-    //TODO: функция заполнения выпадающего списка покупателей
-    let kol = CUSTOMERS.length,
-        optList = '<option value="">-=Выберите покупателя=-</option>';
-    for (let i = 0; i < kol; i++) {
-        optList += '<option value="' + CUSTOMERS[i].name + '">' + CUSTOMERS[i].name + '</option>';
-    }
-    document.getElementById('customers_select').innerHTML = optList;
-}
-viewCustomersList();
-=======
 
 //TODO: написать функцию, которая будет выводить список покупателей
 function viewCustomersList() {
     let list = '<ul>';
     for (let i = 0; i < CUSTOMERS.length; i++){
         if (CUSTOMERS[i].status == 1) {
-        list += `<li><span>${CUSTOMERS[i].name}; ${CUSTOMERS[i].discount}%; ${CUSTOMERS[i].cart}</span><button type="button" onclick="processCustomer()">На кассу</button></li>`;
+        list += `<li><span>${CUSTOMERS[i].name}; ${CUSTOMERS[i].discount}%</span><button type="button" onclick="processCustomer()">На кассу</button></li>`;
         } else {
             list += `<li><span>${CUSTOMERS[i].name}; ${CUSTOMERS[i].discount}%</span></li>`;
         }
@@ -53,4 +29,3 @@ function viewCustomersList() {
     list +='</ul>';
     document.getElementById('customers_list').innerHTML = list;
 }
->>>>>>> master
