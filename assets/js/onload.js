@@ -41,6 +41,7 @@ function printReceipt() {
 
 function getCustomersOptions() {
     //TODO: функция заполнения выпадающего списка покупателей
+
 }
 
 function getProductsOptions() {
