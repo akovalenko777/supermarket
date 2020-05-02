@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //TODO: написать функцию, которая будет выводить список покупателей
 function viewCustomersList() {
     let list = '<ul>';
@@ -7,6 +8,8 @@ function viewCustomersList() {
     list += '</ul>';
     document.getElementById('customers_list').innerHTML = list;
 }
+=======
+>>>>>>> master
 function addCustomer() {
     let nameInput = document.querySelector("#customer_name").value,
         prosentInput = document.querySelector('#customer_discount').value;
@@ -24,6 +27,7 @@ function addCustomer() {
     getCustomersOptions();
     viewCustomersList();
 }
+<<<<<<< HEAD
 function getCustomersOptions() {
     //TODO: функция заполнения выпадающего списка покупателей
     let kol = CUSTOMERS.length,
@@ -34,3 +38,15 @@ function getCustomersOptions() {
     document.getElementById('customers_select').innerHTML = optList;
 }
 viewCustomersList();
+=======
+
+//TODO: написать функцию, которая будет выводить список покупателей
+function viewCustomersList() {
+    let list = '<ul>';
+    for (let i = 0; i < CUSTOMERS.length; i++){
+        list += `<li><span>${CUSTOMERS[i].name}; ${CUSTOMERS[i].discount}%</span><button type="button" onclick="processCustomer()">Скупиться</button></li>`;
+    }
+    list +='</ul>';
+    document.getElementById('customers_list').innerHTML = list;
+}
+>>>>>>> master
